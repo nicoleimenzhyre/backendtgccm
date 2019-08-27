@@ -33,4 +33,9 @@ Route::middleware('auth:api')->group(function () {
     // Route::delete('/users/{id}', 'API\UserController@delete');
     // Route::post('/users/add-roles/{id}', 'API\UserController@addRoles');
 
+    Route::get('/members', 'API\MemberController@show');
+    Route::get('/members/tribe-leaders', 'API\MemberController@showTribeLeaders');
+    Route::post('/member/add-member', 'API\MemberController@create');
+    Route::post('/member/update-member', 'API\MemberController@update');
+
 });
