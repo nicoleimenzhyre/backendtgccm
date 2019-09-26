@@ -19,6 +19,7 @@ class CreateMemberStatusesTable extends Migration
             $table->integer('tribe_leader')->nullable();
             $table->integer('cell_leader')->nullable();
             $table->integer('member_status')->nullable();
+            $table->timestamps();
         });
     }
 

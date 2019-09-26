@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\MemberStatus;
 
 class Member extends Model
 {
@@ -13,4 +14,12 @@ class Member extends Model
         'gender',
         'user_type'
     ];
+
+     /**
+     * Get the member_status associated with the member.
+     */
+    public function member_status()
+    {
+        return $this->hasOne('member_statuses');
+    }
 }
